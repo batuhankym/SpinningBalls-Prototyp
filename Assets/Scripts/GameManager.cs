@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI healthText;
+    private int healthValue = 5;
     [SerializeField] private GameObject TouchButton, TouchText, TitleText;
 
 
@@ -25,9 +27,13 @@ public class GameManager : MonoBehaviour
             TouchButton.SetActive(false);
             TouchText.SetActive(false);
             TitleText.SetActive(false);
-            Destroy(gameObject);
         }
     }
 
+    public void DecreaseHealth()
+    {
+        healthValue--;
+        healthText.text = healthValue.ToString();
+    }
 
 }
