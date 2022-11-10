@@ -9,15 +9,12 @@ public class CheckColors : MonoBehaviour
 {
     private GameManager _gameManager;
     
-    [SerializeField] private List<GameObject> healtsList = new List<GameObject>();
-    [SerializeField] private GameObject healthPrefab;
 
     private int index;
     private bool isCollided;
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
-        healtsList.Add(healthPrefab);
 
     }
     private void OnTriggerStay(Collider other)
@@ -29,18 +26,22 @@ public class CheckColors : MonoBehaviour
             if (gameObject.CompareTag("RedBall") && other.gameObject.CompareTag("RedCircle"))
             {
                 Destroy(gameObject);
+                _gameManager.DestroyList();
+
             }
             else if (gameObject.CompareTag("RedBall") && !other.gameObject.CompareTag("RedCircle"))
             {
                 _gameManager.DecreaseHealth();
                 ChangeScale();
-                Invoke(nameof(DestroyList),1);
                 Debug.Log("ThisNotRed");
             }
             
             if (gameObject.CompareTag("GreenBall") && other.gameObject.CompareTag("GreenCircle"))
             {
                 Destroy(gameObject);
+                _gameManager.DestroyList();
+
+
                 
             }
             else if (gameObject.CompareTag("GreenBall") && !other.gameObject.CompareTag("GreenCircle"))
@@ -48,13 +49,15 @@ public class CheckColors : MonoBehaviour
                 _gameManager.DecreaseHealth();
                 ChangeScale();
 
-                Invoke(nameof(DestroyList),1);
                 Debug.Log("ThisNotGreen");
             }
             
             if (gameObject.CompareTag("YellowBall") && other.gameObject.CompareTag("YellowCircle"))
             {
                 Destroy(gameObject);
+                _gameManager.DestroyList();
+
+
                
             }
             else if (gameObject.CompareTag("YellowBall") && !other.gameObject.CompareTag("YellowCircle"))
@@ -62,7 +65,6 @@ public class CheckColors : MonoBehaviour
                 _gameManager.DecreaseHealth();
                 ChangeScale();
 
-                Invoke(nameof(DestroyList),1);
                 Debug.Log("ThisNotYellow");
             }
         }
@@ -72,15 +74,11 @@ public class CheckColors : MonoBehaviour
         isCollided = false;
         
     }
-    private void DestroyList()
-    {
-        healtsList.RemoveAt(1);
-        Destroy(healtsList[1]);
-    }
+   
 
     private void ChangeScale()
     {
-        transform.DOScale(Vector3.one * 2f, 0.5f).OnComplete(ReturnOriginalScale);
+        transform.DOScale(Vector3.one * 1f, 0.5f).OnComplete(ReturnOriginalScale);
 
     }
 

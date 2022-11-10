@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private GameObject GameOverUI;
+    private int CurrentSceneIndex;
     
     
     public void GameOver()
@@ -15,6 +16,11 @@ public class SceneController : MonoBehaviour
 
     public void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

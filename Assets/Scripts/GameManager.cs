@@ -6,6 +6,9 @@ using UnityEngine;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> ballCount = new List<GameObject>();
+
+    
     private SceneController _sceneController;
     
     [SerializeField] private TextMeshProUGUI healthText;
@@ -18,11 +21,16 @@ public class GameManager : MonoBehaviour
     } 
     void Update()
     {
-        
+        if (ballCount.Count == 0)
+        {
+            _sceneController.LoadNextScene();
+        }
         if (Input.GetMouseButtonDown(0))
         {
             HideStarterUI();
         }
+        
+        
     }
     public void DecreaseHealth()
     {
@@ -47,6 +55,13 @@ public class GameManager : MonoBehaviour
         TouchButton.SetActive(false);
         TouchText.SetActive(false);
         TitleText.SetActive(false);
+    }
+    
+    public void DestroyList()
+    {
+        ballCount.RemoveAt(1);
+        
+        
     }
 
 }
