@@ -33,6 +33,15 @@ public class GameManager : MonoBehaviour
     public void DecreaseHealth()
     {
         healthValue--;
+        if (healthValue < 0)
+        {
+            healthValue = 0;
+        }
+        else if(healthValue <= 0)
+        {
+            Debug.Log("GameOver");
+        }
+
         healthText.text = healthValue.ToString();
     }
 
