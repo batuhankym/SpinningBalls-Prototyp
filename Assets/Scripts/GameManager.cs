@@ -6,30 +6,24 @@ using UnityEngine;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
+    private SceneController _sceneController;
+    
     [SerializeField] private TextMeshProUGUI healthText;
     private int healthValue = 5;
     [SerializeField] private GameObject TouchButton, TouchText, TitleText;
-
-
-    // Start is called before the first frame update
     void Awake()
     {
+        _sceneController = FindObjectOfType<SceneController>();
         Time.timeScale = 0;
-    }
-
-    // Update is called once per frame
+    } 
     void Update()
     {
         
         if (Input.GetMouseButtonDown(0))
         {
-            Time.timeScale = 1;
-            TouchButton.SetActive(false);
-            TouchText.SetActive(false);
-            TitleText.SetActive(false);
+            HideStarterUI();
         }
     }
-
     public void DecreaseHealth()
     {
         healthValue--;
@@ -39,10 +33,20 @@ public class GameManager : MonoBehaviour
         }
         else if(healthValue <= 0)
         {
+            _sceneController.GameOver();
             Debug.Log("GameOver");
         }
 
         healthText.text = healthValue.ToString();
+    }
+
+
+    private void HideStarterUI()
+    {
+        Time.timeScale = 1;
+        TouchButton.SetActive(false);
+        TouchText.SetActive(false);
+        TitleText.SetActive(false);
     }
 
 }

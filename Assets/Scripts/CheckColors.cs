@@ -13,25 +13,21 @@ public class CheckColors : MonoBehaviour
 
     private int index;
     private bool isCollided;
-
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
         healtsList.Add(healthPrefab);
 
     }
-
     private void OnTriggerStay(Collider other)
     {
         isCollided = true;
-
+        
         if (Input.GetMouseButtonDown(0) && isCollided)
         {
             if (gameObject.CompareTag("RedBall") && other.gameObject.CompareTag("RedCircle"))
             {
                 Destroy(gameObject);
-                
-               
             }
             else if (gameObject.CompareTag("RedBall") && !other.gameObject.CompareTag("RedCircle"))
             {
@@ -40,6 +36,7 @@ public class CheckColors : MonoBehaviour
                 Invoke(nameof(DestroyList),1);
                 Debug.Log("ThisNotRed");
             }
+            
             if (gameObject.CompareTag("GreenBall") && other.gameObject.CompareTag("GreenCircle"))
             {
                 Destroy(gameObject);
@@ -52,6 +49,7 @@ public class CheckColors : MonoBehaviour
                 Invoke(nameof(DestroyList),1);
                 Debug.Log("ThisNotGreen");
             }
+            
             if (gameObject.CompareTag("YellowBall") && other.gameObject.CompareTag("YellowCircle"))
             {
                 Destroy(gameObject);
@@ -65,14 +63,12 @@ public class CheckColors : MonoBehaviour
                 Debug.Log("ThisNotYellow");
             }
         }
-    }
-
+    } 
     private void OnTriggerExit(Collider other)
     {
         isCollided = false;
         
     }
-
     private void DestroyList()
     {
         healtsList.RemoveAt(1);
