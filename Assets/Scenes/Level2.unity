@@ -153,6 +153,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57fc43f53771024689bbb2266a7e682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballCount:
+  - {fileID: 1461848827}
+  - {fileID: 1260102761}
+  - {fileID: 449144783}
+  - {fileID: 1463662925}
+  - {fileID: 1434811205}
   healthText: {fileID: 1259392313}
   TouchButton: {fileID: 2067824874}
   TouchText: {fileID: 1179100886}
@@ -548,13 +554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9ecbc425c7e574ba2f24d9d3e50e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  healthPrefab: {fileID: 4276788067524049828, guid: d3a8f629346989d45baca223ea699444,
-    type: 3}
 --- !u!54 &449144790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1339,13 +1338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9ecbc425c7e574ba2f24d9d3e50e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  healthPrefab: {fileID: 4276788067524049828, guid: d3a8f629346989d45baca223ea699444,
-    type: 3}
 --- !u!54 &1260102768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1488,13 +1480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9ecbc425c7e574ba2f24d9d3e50e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  healthPrefab: {fileID: 4276788067524049828, guid: d3a8f629346989d45baca223ea699444,
-    type: 3}
 --- !u!54 &1434811212
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1637,13 +1622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9ecbc425c7e574ba2f24d9d3e50e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  healthPrefab: {fileID: 4276788067524049828, guid: d3a8f629346989d45baca223ea699444,
-    type: 3}
 --- !u!54 &1461848834
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1786,13 +1764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9ecbc425c7e574ba2f24d9d3e50e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  healthPrefab: {fileID: 4276788067524049828, guid: d3a8f629346989d45baca223ea699444,
-    type: 3}
 --- !u!54 &1463662932
 Rigidbody:
   m_ObjectHideFlags: 0

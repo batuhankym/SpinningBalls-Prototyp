@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> ballCount = new List<GameObject>();
 
+
     
     private SceneController _sceneController;
     
@@ -21,10 +22,7 @@ public class GameManager : MonoBehaviour
     } 
     void Update()
     {
-        if (ballCount.Count == 0)
-        {
-            _sceneController.LoadNextScene();
-        }
+       
         if (Input.GetMouseButtonDown(0))
         {
             HideStarterUI();
@@ -59,9 +57,14 @@ public class GameManager : MonoBehaviour
     
     public void DestroyList()
     {
-        ballCount.RemoveAt(1);
+        ballCount.RemoveAt(ballCount.Count-1);
         
-        
+        if (ballCount.Count == 0)
+        {
+            _sceneController.LoadNextScene();
+        }
+
+
     }
 
 }
