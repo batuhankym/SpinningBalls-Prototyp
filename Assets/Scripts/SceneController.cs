@@ -12,6 +12,7 @@ public class SceneController : MonoBehaviour
     {
         GameOverUI.SetActive(true);
         
+        
     }
 
     public void RestartGame()

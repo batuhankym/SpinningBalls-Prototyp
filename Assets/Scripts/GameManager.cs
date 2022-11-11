@@ -1,25 +1,38 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> ballCount = new List<GameObject>();
-
-
-    
     private SceneController _sceneController;
-    
+
+    [SerializeField] private List<GameObject> ballCount = new List<GameObject>();
+    [SerializeField] private Ease MotionType;
     [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private GameObject TouchButton, TouchText, healthCounter, playAgainButton, playAgainText;
+
+
     private int healthValue = 5;
-    [SerializeField] private GameObject TouchButton, TouchText, TitleText;
-    void Awake()
+
+    
+    private void Start()
     {
+        TouchText.transform.DOScale(1.2f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+        playAgainText.transform.DOScale(1.2f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+
+        TouchButton.transform.DOMoveX(355f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+        playAgainButton.transform.DOMoveX(355f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+
+        
+
         _sceneController = FindObjectOfType<SceneController>();
         Time.timeScale = 0;
-    } 
+    }
+
+   
     void Update()
     {
        
@@ -27,6 +40,7 @@ public class GameManager : MonoBehaviour
         {
             HideStarterUI();
         }
+  
         
         
     }
@@ -52,19 +66,25 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         TouchButton.SetActive(false);
         TouchText.SetActive(false);
-        TitleText.SetActive(false);
+        healthCounter.SetActive(true);
     }
-    
+
     public void DestroyList()
     {
-        ballCount.RemoveAt(ballCount.Count-1);
-        
+        ballCount.RemoveAt(ballCount.Count - 1);
+
         if (ballCount.Count == 0)
         {
             _sceneController.LoadNextScene();
+
         }
-
-
     }
 
+
 }
+
+
+    
+
+    
+
