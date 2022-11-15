@@ -10,8 +10,6 @@ public class CheckColors : MonoBehaviour
     private GameManager _gameManager;
     
 
-    private int index;
-    private bool isCollided;
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
@@ -19,24 +17,22 @@ public class CheckColors : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        isCollided = true;
-        
-        if (Input.GetMouseButtonDown(0) && isCollided)
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (gameObject.CompareTag("RedBall") && other.gameObject.CompareTag("RedCircle"))
+            if (transform.CompareTag("Red") && other.transform.CompareTag("Red"))
             {
                 Destroy(gameObject);
                 _gameManager.DestroyList();
 
             }
-            else if (gameObject.CompareTag("RedBall") && !other.gameObject.CompareTag("RedCircle"))
+            else if (transform.CompareTag("Red") && !other.transform.CompareTag("Red"))
             {
                 _gameManager.DecreaseHealth();
                 ChangeScale();
                 Debug.Log("ThisNotRed");
             }
             
-            if (gameObject.CompareTag("GreenBall") && other.gameObject.CompareTag("GreenCircle"))
+            if (transform.CompareTag("Green") && other.transform.CompareTag("Green"))
             {
                 Destroy(gameObject);
                 _gameManager.DestroyList();
@@ -44,7 +40,7 @@ public class CheckColors : MonoBehaviour
 
                 
             }
-            else if (gameObject.CompareTag("GreenBall") && !other.gameObject.CompareTag("GreenCircle"))
+            else if (transform.CompareTag("Green") && !transform.CompareTag("Green"))
             {
                 _gameManager.DecreaseHealth();
                 ChangeScale();
@@ -52,7 +48,7 @@ public class CheckColors : MonoBehaviour
                 Debug.Log("ThisNotGreen");
             }
             
-            if (gameObject.CompareTag("YellowBall") && other.gameObject.CompareTag("YellowCircle"))
+            if (transform.CompareTag("Yellow") && other.transform.CompareTag("Yellow"))
             {
                 Destroy(gameObject);
                 _gameManager.DestroyList();
@@ -60,7 +56,7 @@ public class CheckColors : MonoBehaviour
 
                
             }
-            else if (gameObject.CompareTag("YellowBall") && !other.gameObject.CompareTag("YellowCircle"))
+            else if (transform.CompareTag("Yellow") && !other.transform.CompareTag("Yellow")) 
             {
                 _gameManager.DecreaseHealth();
                 ChangeScale();
@@ -68,17 +64,11 @@ public class CheckColors : MonoBehaviour
                 Debug.Log("ThisNotYellow");
             }
         }
-    } 
-    private void OnTriggerExit(Collider other)
-    {
-        isCollided = false;
-        
     }
-   
-
+    
     private void ChangeScale()
     {
-        transform.DOScale(Vector3.one * 1f, 0.5f).OnComplete(ReturnOriginalScale);
+        transform.DOScale(Vector3.one * 1.5f, 0.5f).OnComplete(ReturnOriginalScale);
 
     }
 

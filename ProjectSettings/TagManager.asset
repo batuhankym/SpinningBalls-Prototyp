@@ -4,12 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - RedBall
-  - YellowBall
-  - GreenBall
-  - RedCircle
-  - GreenCircle
-  - YellowCircle
+  - Red
+  - Green
+  - Yellow
   layers:
   - Default
   - TransparentFX
