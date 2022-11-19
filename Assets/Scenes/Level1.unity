@@ -685,19 +685,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
---- !u!135 &872598018
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872598004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5666257
-  m_Center: {x: 0.018663853, y: 0, z: 0}
 --- !u!1 &904264856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 582812033974266183, guid: 462c18941c5f70f4fb807aa7af1a284d,

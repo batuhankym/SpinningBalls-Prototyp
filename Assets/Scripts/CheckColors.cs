@@ -17,61 +17,29 @@ public class CheckColors : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
-            if (transform.CompareTag("Red") && other.transform.CompareTag("Red"))
+
+            if (other.gameObject.CompareTag(gameObject.tag))
             {
                 Destroy(gameObject);
                 _gameManager.DestroyList();
 
             }
-            else if (transform.CompareTag("Red") && !other.transform.CompareTag("Red"))
+            if (!other.gameObject.CompareTag(gameObject.tag))
             {
                 _gameManager.DecreaseHealth();
                 ChangeScale();
                 Debug.Log("ThisNotRed");
             }
-            
-            if (transform.CompareTag("Green") && other.transform.CompareTag("Green"))
-            {
-                Destroy(gameObject);
-                _gameManager.DestroyList();
-
-
-                
-            }
-            else if (transform.CompareTag("Green") && !transform.CompareTag("Green"))
-            {
-                _gameManager.DecreaseHealth();
-                ChangeScale();
-
-                Debug.Log("ThisNotGreen");
-            }
-            
-            if (transform.CompareTag("Yellow") && other.transform.CompareTag("Yellow"))
-            {
-                Destroy(gameObject);
-                _gameManager.DestroyList();
-
-
-               
-            }
-            else if (transform.CompareTag("Yellow") && !other.transform.CompareTag("Yellow")) 
-            {
-                _gameManager.DecreaseHealth();
-                ChangeScale();
-
-                Debug.Log("ThisNotYellow");
-            }
         }
+
     }
-    
     private void ChangeScale()
     {
         transform.DOScale(Vector3.one * 1.5f, 0.5f).OnComplete(ReturnOriginalScale);
 
-    }
-
+    } 
     private void ReturnOriginalScale()
     {
         transform.DOScale(new Vector3(0.8f,0.8f,0.8f),0.5f);
