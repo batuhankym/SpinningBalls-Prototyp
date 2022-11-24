@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7fb62677-eb43-4a7f-901d-7883b3f360b2" name="Changes" comment="" />
+    <list default="true" id="3a2b7b7d-bfe5-4285-bc1e-d131fc7c44e9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.recorder@3.0.3/Editor/Sources/Recorders/_Inputs/GameViewSize.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2HEUYP6uFqrBRWLGEvbfexhgDe5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2Hr7qjBs68754fIaUeW8399Wu48" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,14 +21,15 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\batuh\Documents\GitHub\RollingBalls -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\batuh\Documents\GitHub\RollingBalls" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\GitHubRepository\SpinningBalls -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\GitHubRepository\SpinningBalls" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -61,41 +58,21 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7fb62677-eb43-4a7f-901d-7883b3f360b2" name="Changes" comment="" />
-      <created>1667849809545</created>
+      <changelist id="3a2b7b7d-bfe5-4285-bc1e-d131fc7c44e9" name="Changes" comment="" />
+      <created>1669031542756</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1667849809545</updated>
-      <workItem from="1667849953645" duration="2655000" />
-      <workItem from="1667864337011" duration="943000" />
-      <workItem from="1667901456647" duration="1755000" />
-      <workItem from="1667907346745" duration="11438000" />
-      <workItem from="1667986883365" duration="694000" />
-      <workItem from="1667992886869" duration="3119000" />
-      <workItem from="1668002282170" duration="232000" />
-      <workItem from="1668003643680" duration="4214000" />
-      <workItem from="1668021705636" duration="4896000" />
-      <workItem from="1668079267534" duration="3395000" />
-      <workItem from="1668085224298" duration="827000" />
-      <workItem from="1668091378385" duration="791000" />
-      <workItem from="1668093825245" duration="2093000" />
-      <workItem from="1668119892369" duration="1441000" />
-      <workItem from="1668156999893" duration="1143000" />
-      <workItem from="1668168606566" duration="2242000" />
-      <workItem from="1668197952057" duration="5384000" />
-      <workItem from="1668204916600" duration="1093000" />
-      <workItem from="1668206719193" duration="195000" />
-      <workItem from="1668242786373" duration="4375000" />
-      <workItem from="1668294661963" duration="877000" />
-      <workItem from="1668358585899" duration="1841000" />
-      <workItem from="1668368460232" duration="3177000" />
-      <workItem from="1668429390525" duration="355000" />
-      <workItem from="1668451612120" duration="1106000" />
-      <workItem from="1668462877209" duration="10000" />
-      <workItem from="1668672434364" duration="50000" />
-      <workItem from="1668672498020" duration="126000" />
-      <workItem from="1668869655932" duration="2632000" />
-      <workItem from="1668942001726" duration="149000" />
+      <updated>1669031542756</updated>
+      <workItem from="1669031570405" duration="2906000" />
+      <workItem from="1669034683677" duration="1505000" />
+      <workItem from="1669040672910" duration="304000" />
+      <workItem from="1669111042534" duration="1889000" />
+      <workItem from="1669233821140" duration="1091000" />
+      <workItem from="1669279901536" duration="5675000" />
+      <workItem from="1669303419833" duration="1440000" />
+      <workItem from="1669315756454" duration="635000" />
+      <workItem from="1669316741253" duration="1902000" />
+      <workItem from="1669320164248" duration="657000" />
     </task>
     <servers />
   </component>

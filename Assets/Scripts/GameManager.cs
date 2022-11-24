@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 
         _sceneController = FindObjectOfType<SceneController>();
         Time.timeScale = 0;
+        
     }
 
    
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
        
         if (Input.GetMouseButtonDown(0))
         {
-            HideStarterUI();
+            
         }
   
         
@@ -53,24 +54,30 @@ public class GameManager : MonoBehaviour
         }
         else if(healthValue <= 0)
         {
-            _sceneController.GameOver();
+            _sceneController.Invoke("GameOver",1f);
+            
             Debug.Log("GameOver");
+            if (Input.GetMouseButtonDown(0))
+            {
+                _sceneController.RestartGame();
+            }
         }
 
         healthText.text = healthValue.ToString();
     }
 
 
-    private void HideStarterUI()
+    public void HideStarterUI()
     {
         Time.timeScale = 1;
         TouchButton.SetActive(false);
         TouchText.SetActive(false);
         healthCounter.SetActive(true);
     }
+    
 
-    public void DestroyList()
-    {
+   public void DestroyList()
+   {
         ballCount.RemoveAt(ballCount.Count - 1);
 
         if (ballCount.Count == 0)
@@ -80,6 +87,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+   private void SetTimeActive()
+   {
+       Time.timeScale = 1;
+   }
 
 }
 

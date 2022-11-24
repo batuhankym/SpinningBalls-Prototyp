@@ -130,6 +130,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -231,6 +237,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -337,6 +349,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -438,6 +456,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -784,6 +808,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -896,6 +926,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -1144,6 +1180,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -1250,6 +1292,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -1263,7 +1311,7 @@ PrefabInstance:
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.21
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
@@ -1380,7 +1428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037710717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.99, y: -2.37, z: 0}
+  m_LocalPosition: {x: -0.99, y: -2.37, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1394,6 +1442,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280964571859818528, guid: d95cb25536a1f3a4b877c098f5c3cb21,
+        type: 3}
+      propertyPath: confettiParticle
+      value: 
+      objectReference: {fileID: 4481935585521446731, guid: c0d472594bdf1094f923d6db312d7ba9,
+        type: 3}
     - target: {fileID: 5280964571859818529, guid: d95cb25536a1f3a4b877c098f5c3cb21,
         type: 3}
       propertyPath: m_RootOrder
@@ -1500,6 +1554,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 582812032731549283, guid: 462c18941c5f70f4fb807aa7af1a284d,
+        type: 3}
+      propertyPath: m_text
+      value: SPINNING BALLS
+      objectReference: {fileID: 0}
+    - target: {fileID: 582812032731549283, guid: 462c18941c5f70f4fb807aa7af1a284d,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -494.6417
+      objectReference: {fileID: 0}
     - target: {fileID: 582812033597382572, guid: 462c18941c5f70f4fb807aa7af1a284d,
         type: 3}
       propertyPath: m_Pivot.x
