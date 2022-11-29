@@ -5,6 +5,7 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+// ReSharper disable All
 public class GameManager : MonoBehaviour
 {
     private SceneController _sceneController;
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private GameObject TouchButton, TouchText, healthCounter, playAgainButton, playAgainText;
 
+    [SerializeField] private GameObject victoryVFX;
 
     private int healthValue = 5;
 
@@ -78,11 +80,13 @@ public class GameManager : MonoBehaviour
 
    public void DestroyList()
    {
-        ballCount.RemoveAt(ballCount.Count - 1);
+       ballCount.Remove(ballCount[ballCount.Count -1]);
 
         if (ballCount.Count == 0)
         {
-            _sceneController.LoadNextScene();
+            Instantiate(victoryVFX, transform.position, transform.rotation);
+
+            _sceneController.Invoke(nameof(_sceneController.LoadNextScene),1f);
 
         }
     }

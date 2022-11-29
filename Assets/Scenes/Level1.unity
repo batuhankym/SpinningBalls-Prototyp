@@ -950,17 +950,17 @@ PrefabInstance:
     - target: {fileID: 5421445928790255317, guid: 8ddb38e0e458f834dab8f7020469af99,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.76529926
+      value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 5421445928790255317, guid: 8ddb38e0e458f834dab8f7020469af99,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.822693
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5421445928790255317, guid: 8ddb38e0e458f834dab8f7020469af99,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: 5421445928790255317, guid: 8ddb38e0e458f834dab8f7020469af99,
         type: 3}
@@ -1007,6 +1007,12 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1168196930}
+    - target: {fileID: 5421445928790255318, guid: 8ddb38e0e458f834dab8f7020469af99,
+        type: 3}
+      propertyPath: victoryVFX
+      value: 
+      objectReference: {fileID: 4778359264880959830, guid: c7da5d96c78d98d45a9464e31176cf93,
+        type: 3}
     - target: {fileID: 5421445928790255318, guid: 8ddb38e0e458f834dab8f7020469af99,
         type: 3}
       propertyPath: TouchButton
