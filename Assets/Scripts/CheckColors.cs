@@ -10,6 +10,7 @@ public class CheckColors : MonoBehaviour
     public bool isGameActive;
 
     private GameManager _gameManager;
+    private SceneController _sceneController;
 
     private bool isInSameColor;
     private bool isGamePause;
@@ -25,27 +26,35 @@ public class CheckColors : MonoBehaviour
 
     private void Update()
     {
-            if (Input.GetMouseButtonDown(0))
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+            if (!isGameActive)
             {
-                if (!isGameActive)
-                {
-                    isGameActive = true;
-                    _gameManager.HideStarterUI();
-
-                }
-                else if (isInSameColor && isGameActive) 
-                {
-                        Instantiate(confettiParticle, transform.position, transform.rotation);
-                        Invoke(nameof(DestroyBall), 0.1f);
-                        _gameManager.Invoke(nameof(GameManager.DestroyList), 1f);
-                }
-                else
-                {
-                        _gameManager.DecreaseHealth();
-                        ChangeScale();
-                }
+                isGameActive = true;
+                _gameManager.HideStarterUI();
 
             }
+            else if (isInSameColor && isGameActive) 
+            {
+                Instantiate(confettiParticle, transform.position, transform.rotation);
+                Invoke(nameof(DestroyBall), 0.1f);
+                _gameManager.Invoke(nameof(GameManager.DestroyList), 1f);
+            }
+            
+            else
+            {
+                _gameManager.DecreaseHealth();
+                ChangeScale();
+            }
+           
+        }
+         
+        if (_gameManager.healthValue <= 0)
+        {
+            Destroy(gameObject);
+        } 
         
     }
     private void OnTriggerEnter(Collider other)
@@ -78,7 +87,6 @@ public class CheckColors : MonoBehaviour
         Destroy(gameObject);
 
     }
-    
-    
-    
+
+  
 }

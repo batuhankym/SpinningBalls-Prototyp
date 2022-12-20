@@ -6,12 +6,12 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] private GameObject GameOverUI;
     private int CurrentSceneIndex;
-    
-    
+
+    private float count;
     public void GameOver()
     {
         GameOverUI.SetActive(true);
-        
+        count += Time.unscaledDeltaTime;
         
     }
 
