@@ -8,24 +8,38 @@ using TMPro;
 // ReSharper disable All
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+    
+    [SerializeField] private Camera mainCam;
     private SceneController _sceneController;
     private CheckColors _checkColors;
 
     [SerializeField] private List<GameObject> ballCount = new List<GameObject>();
     [SerializeField] private Ease MotionType;
+
     [SerializeField] private TextMeshProUGUI healthText;
-    [SerializeField] private GameObject TouchButton, TouchText, healthCounter, playAgainButton, playAgainText;
-    [SerializeField] private GameObject victoryVFX;
+    [SerializeField] private GameObject TouchText, TouchButton, healthCounter, playAgainButton, playAgainText;
     
     public int healthValue = 5;
 
+  
+  
     private void Start()
     {
-        TouchText.transform.DOScale(1.2f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+        mainCam = GetComponent<Camera>();
+        mainCam = Camera.main;
+        
+        mainCam.transform.DOMoveX(0, 3f).SetLoops(1).SetEase(MotionType).SetUpdate(true);
+        
         playAgainText.transform.DOScale(1.2f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
 
-        TouchButton.transform.DOMoveX(355f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
         playAgainButton.transform.DOMoveX(355f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+
+        TouchText.transform.DOScale(1.2f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+        TouchButton.transform.DOMoveX(355f, 1f).SetLoops(1000, LoopType.Yoyo).SetEase(MotionType).SetUpdate(true);
+
+
+       
         
         _sceneController = FindObjectOfType<SceneController>();
         Time.timeScale = 0;
@@ -34,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        
+        
         if (Input.GetMouseButtonDown(0))
         {
             if (healthValue <= 0)
@@ -41,6 +57,8 @@ public class GameManager : MonoBehaviour
                 _sceneController.RestartGame();
             }
         }
+
+       
     }
 
     public void DecreaseHealth()
@@ -75,9 +93,15 @@ public class GameManager : MonoBehaviour
 
         if (ballCount.Count == 0)
         {
-            Instantiate(victoryVFX, transform.position, transform.rotation);
+            
+            mainCam.transform.DOMoveX(8, 2f).SetLoops(1).SetEase(MotionType).SetUpdate(true);
 
-            _sceneController.Invoke(nameof(_sceneController.LoadNextScene),1f);
+            TouchButton.SetActive(true);
+            TouchText.SetActive(true);
+            healthCounter.SetActive(false);
+
+
+            _sceneController.Invoke(nameof(_sceneController.LoadNextScene),2.1f);
 
         }
     }
